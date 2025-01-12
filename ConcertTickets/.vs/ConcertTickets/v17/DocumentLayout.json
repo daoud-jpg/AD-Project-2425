@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\elmim\\source\\repos\\ConcertTickets\\ConcertTickets\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E9FC4808-02C2-4267-BBB8-1ACBEEF84B98}|ConcertTickets\\ConcertTickets.csproj|c:\\users\\elmim\\source\\repos\\concerttickets\\concerttickets\\concerttickets\\services\\concertservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9FC4808-02C2-4267-BBB8-1ACBEEF84B98}|ConcertTickets\\ConcertTickets.csproj|solutionrelative:concerttickets\\services\\concertservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9FC4808-02C2-4267-BBB8-1ACBEEF84B98}|ConcertTickets\\ConcertTickets.csproj|c:\\users\\elmim\\source\\repos\\concerttickets\\concerttickets\\concerttickets\\models\\concertviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9FC4808-02C2-4267-BBB8-1ACBEEF84B98}|ConcertTickets\\ConcertTickets.csproj|solutionrelative:concerttickets\\models\\concertviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E9FC4808-02C2-4267-BBB8-1ACBEEF84B98}|ConcertTickets\\ConcertTickets.csproj|c:\\users\\elmim\\source\\repos\\concerttickets\\concerttickets\\concerttickets\\views\\concert\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E9FC4808-02C2-4267-BBB8-1ACBEEF84B98}|ConcertTickets\\ConcertTickets.csproj|solutionrelative:concerttickets\\views\\concert\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E9FC4808-02C2-4267-BBB8-1ACBEEF84B98}|ConcertTickets\\ConcertTickets.csproj|c:\\users\\elmim\\source\\repos\\concerttickets\\concerttickets\\concerttickets\\controllers\\concertcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E9FC4808-02C2-4267-BBB8-1ACBEEF84B98}|ConcertTickets\\ConcertTickets.csproj|solutionrelative:concerttickets\\controllers\\concertcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9FC4808-02C2-4267-BBB8-1ACBEEF84B98}|ConcertTickets\\ConcertTickets.csproj|c:\\users\\elmim\\source\\repos\\concerttickets\\concerttickets\\concerttickets\\services\\concertservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9FC4808-02C2-4267-BBB8-1ACBEEF84B98}|ConcertTickets\\ConcertTickets.csproj|solutionrelative:concerttickets\\services\\concertservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9FC4808-02C2-4267-BBB8-1ACBEEF84B98}|ConcertTickets\\ConcertTickets.csproj|c:\\users\\elmim\\source\\repos\\concerttickets\\concerttickets\\concerttickets\\repositories\\concertrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9FC4808-02C2-4267-BBB8-1ACBEEF84B98}|ConcertTickets\\ConcertTickets.csproj|solutionrelative:concerttickets\\repositories\\concertrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,21 +26,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ConcertViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\elmim\\source\\repos\\ConcertTickets\\ConcertTickets\\ConcertTickets\\Models\\ConcertViewModel.cs",
-              "RelativeDocumentMoniker": "ConcertTickets\\Models\\ConcertViewModel.cs",
-              "ToolTip": "C:\\Users\\elmim\\source\\repos\\ConcertTickets\\ConcertTickets\\ConcertTickets\\Models\\ConcertViewModel.cs",
-              "RelativeToolTip": "ConcertTickets\\Models\\ConcertViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T22:33:09.233Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
@@ -56,25 +47,51 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ConcertService.cs",
-              "DocumentMoniker": "C:\\Users\\elmim\\source\\repos\\ConcertTickets\\ConcertTickets\\ConcertTickets\\Services\\ConcertService.cs",
-              "RelativeDocumentMoniker": "ConcertTickets\\Services\\ConcertService.cs",
-              "ToolTip": "C:\\Users\\elmim\\source\\repos\\ConcertTickets\\ConcertTickets\\ConcertTickets\\Services\\ConcertService.cs",
-              "RelativeToolTip": "ConcertTickets\\Services\\ConcertService.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwCAAAAAAAAAAAAAAAA==",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\elmim\\source\\repos\\ConcertTickets\\ConcertTickets\\ConcertTickets\\Views\\Concert\\Index.cshtml",
+              "RelativeDocumentMoniker": "ConcertTickets\\Views\\Concert\\Index.cshtml",
+              "ToolTip": "C:\\Users\\elmim\\source\\repos\\ConcertTickets\\ConcertTickets\\ConcertTickets\\Views\\Concert\\Index.cshtml",
+              "RelativeToolTip": "ConcertTickets\\Views\\Concert\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-11T22:38:56.282Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ConcertRepository.cs",
+              "DocumentMoniker": "C:\\Users\\elmim\\source\\repos\\ConcertTickets\\ConcertTickets\\ConcertTickets\\Repositories\\ConcertRepository.cs",
+              "RelativeDocumentMoniker": "ConcertTickets\\Repositories\\ConcertRepository.cs",
+              "ToolTip": "C:\\Users\\elmim\\source\\repos\\ConcertTickets\\ConcertTickets\\ConcertTickets\\Repositories\\ConcertRepository.cs",
+              "RelativeToolTip": "ConcertTickets\\Repositories\\ConcertRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T22:12:52.984Z",
+              "WhenOpened": "2025-01-11T20:42:23.91Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "ConcertService.cs",
+              "DocumentMoniker": "C:\\Users\\elmim\\source\\repos\\ConcertTickets\\ConcertTickets\\ConcertTickets\\Services\\ConcertService.cs",
+              "RelativeDocumentMoniker": "ConcertTickets\\Services\\ConcertService.cs",
+              "ToolTip": "C:\\Users\\elmim\\source\\repos\\ConcertTickets\\ConcertTickets\\ConcertTickets\\Services\\ConcertService.cs",
+              "RelativeToolTip": "ConcertTickets\\Services\\ConcertService.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAwwBEAAABjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T22:13:01.016Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "ConcertController.cs",
               "DocumentMoniker": "C:\\Users\\elmim\\source\\repos\\ConcertTickets\\ConcertTickets\\ConcertTickets\\Controllers\\ConcertController.cs",
               "RelativeDocumentMoniker": "ConcertTickets\\Controllers\\ConcertController.cs",
               "ToolTip": "C:\\Users\\elmim\\source\\repos\\ConcertTickets\\ConcertTickets\\ConcertTickets\\Controllers\\ConcertController.cs",
               "RelativeToolTip": "ConcertTickets\\Controllers\\ConcertController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA3wBEAAABcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-10T22:10:15.859Z",
               "EditorCaption": ""

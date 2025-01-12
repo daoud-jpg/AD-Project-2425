@@ -11,7 +11,6 @@ namespace ConcertTickets.Data.Entities
 
         //Relations
         public int ConcertId { get; set; }
-        [NotMapped]
         public Concert Concert { get; set; }
     }
 }

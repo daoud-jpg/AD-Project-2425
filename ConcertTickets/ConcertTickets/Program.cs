@@ -1,4 +1,5 @@
 using ConcertTickets.Data;
+using ConcertTickets.Repositories;
 using ConcertTickets.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -35,6 +36,7 @@ namespace ConcertTickets
             
             // Services
             builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            builder.Services.AddScoped<IConcertRepository, ConcertRepository>();
             builder.Services.AddScoped<IConcertService, ConcertService>();
 
             var app = builder.Build();
@@ -62,7 +64,7 @@ namespace ConcertTickets
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Concert}/{action=Index}/{id?}");
             app.MapRazorPages();
 
             app.Run();

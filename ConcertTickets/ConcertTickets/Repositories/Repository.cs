@@ -4,50 +4,50 @@ using ConcertTickets.Data.Entities;
 using System.Linq.Expressions;
 public class Repository<T> : IRepository<T> where T : BaseEntity
 {
-    protected readonly ApplicationDbContext _context;
+    protected readonly ApplicationDbContext context;
 
-    public Repository(ApplicationDbContext context)
+    public Repository(ApplicationDbContext _context)
     {
-        _context = context;
+        context = _context;
     }
 
     public void Add(T entity)
     {
-        _context.Set<T>().Add(entity);
+        context.Set<T>().Add(entity);
     }
 
     public void Delete(T entity)
     {
-        _context.Set<T>().Remove(entity);
+        context.Set<T>().Remove(entity);
     }
 
     public T GetByCondition(Expression<Func<T, bool>> predicate)
     {
-        return _context.Set<T>().Where(predicate).SingleOrDefault();
+        return context.Set<T>().Where(predicate).SingleOrDefault();
     }
 
     public IEnumerable<T> GetAll()
     {
-        return _context.Set<T>().ToList();
+        return context.Set<T>().ToList();
     }
 
     public IEnumerable<T> GetAllByCondition(Expression<Func<T, bool>> predicate)
     {
-        return _context.Set<T>().Where(predicate).ToList();
+        return context.Set<T>().Where(predicate).ToList();
     }
 
     public T GetById(int id)
     {
-        return _context.Set<T>().SingleOrDefault(x => x.Id == id);
+        return context.Set<T>().SingleOrDefault(x => x.Id == id);
     }
 
     public bool SaveChanges()
     {
-        return _context.SaveChanges() > 0;
+        return context.SaveChanges() > 0;
     }
 
     public void Update(T entity)
     {
-        _context.Set<T>().Update(entity);
+        context.Set<T>().Update(entity);
     }
 }

@@ -1,0 +1,24 @@
+﻿@model IEnumerable<ConcertViewModel>
+@{
+    List<int> distincts = new List<int>();
+}
+
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    @foreach (var item in Model)
+    {
+        if (!distincts.Contains(item.Id))
+        {
+            <div class="col">
+                <div class="card text-center h-100" style="width: 18rem;">
+                    <img src="/img/@{@item.ArtistPicture}.png" class="card-img-top border-bottom-1" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Artist</h5>
+                        <p class="card-text">@item.Location</p>
+                    </div>
+                </div>
+            </div>
+            distincts.Add(item.Id);
+        }
+    }
+</div>

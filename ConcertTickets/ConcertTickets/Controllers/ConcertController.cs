@@ -1,5 +1,7 @@
 ﻿using ConcertTickets.Services;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections;
+using ConcertTickets.Models;
 
 namespace ConcertTickets.Controllers
 {
@@ -13,8 +15,8 @@ namespace ConcertTickets.Controllers
         }
         public IActionResult Index()
         {
-            concertService.Get
-            return View();
+            IEnumerable<ConcertViewModel> concertOverzicht = concertService.GetAllConcerts();
+            return View(concertOverzicht);
         }
 
 
