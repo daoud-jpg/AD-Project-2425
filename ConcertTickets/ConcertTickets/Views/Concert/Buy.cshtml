@@ -1,0 +1,16 @@
+﻿@model ConcertViewModel
+
+<h2>Koop tickets voor @Model.Artist</h2>
+<div class="col">
+    <div class="card text-center h-100" style="width: 18rem;">
+        <img src="/img/@{
+            @Model.ArtistPicture.Replace(" ", string.Empty)
+}.png" class="card-img-top border-bottom-1 opacity-0" alt="...">
+        <div class="date-box">
+            <h5 class="text-uppercase">@Model.Date.DayOfWeek</h5>
+            <div class="day">@Model.Date.Day</div>
+            <div class="month">MRT. 2025</div>
+        </div>
+        <p>@Model.Ti</p>
+    </div>
+</div>

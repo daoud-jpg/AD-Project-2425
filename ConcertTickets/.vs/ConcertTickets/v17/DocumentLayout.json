@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\elmim\\source\\repos\\ConcertTickets\\ConcertTickets\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E9FC4808-02C2-4267-BBB8-1ACBEEF84B98}|ConcertTickets\\ConcertTickets.csproj|c:\\users\\elmim\\source\\repos\\concerttickets\\concerttickets\\concerttickets\\views\\concert\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E9FC4808-02C2-4267-BBB8-1ACBEEF84B98}|ConcertTickets\\ConcertTickets.csproj|solutionrelative:concerttickets\\views\\concert\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E9FC4808-02C2-4267-BBB8-1ACBEEF84B98}|ConcertTickets\\ConcertTickets.csproj|c:\\users\\elmim\\source\\repos\\concerttickets\\concerttickets\\concerttickets\\controllers\\concertcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9FC4808-02C2-4267-BBB8-1ACBEEF84B98}|ConcertTickets\\ConcertTickets.csproj|solutionrelative:concerttickets\\controllers\\concertcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E9FC4808-02C2-4267-BBB8-1ACBEEF84B98}|ConcertTickets\\ConcertTickets.csproj|c:\\users\\elmim\\source\\repos\\concerttickets\\concerttickets\\concerttickets\\data\\entities\\concert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9FC4808-02C2-4267-BBB8-1ACBEEF84B98}|ConcertTickets\\ConcertTickets.csproj|solutionrelative:concerttickets\\data\\entities\\concert.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E9FC4808-02C2-4267-BBB8-1ACBEEF84B98}|ConcertTickets\\ConcertTickets.csproj|c:\\users\\elmim\\source\\repos\\concerttickets\\concerttickets\\concerttickets\\services\\concertservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,6 +13,22 @@
     {
       "AbsoluteMoniker": "D:0:0:{E9FC4808-02C2-4267-BBB8-1ACBEEF84B98}|ConcertTickets\\ConcertTickets.csproj|c:\\users\\elmim\\source\\repos\\concerttickets\\concerttickets\\concerttickets\\repositories\\concertrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E9FC4808-02C2-4267-BBB8-1ACBEEF84B98}|ConcertTickets\\ConcertTickets.csproj|solutionrelative:concerttickets\\repositories\\concertrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9FC4808-02C2-4267-BBB8-1ACBEEF84B98}|ConcertTickets\\ConcertTickets.csproj|c:\\users\\elmim\\source\\repos\\concerttickets\\concerttickets\\concerttickets\\models\\concertviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9FC4808-02C2-4267-BBB8-1ACBEEF84B98}|ConcertTickets\\ConcertTickets.csproj|solutionrelative:concerttickets\\models\\concertviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9FC4808-02C2-4267-BBB8-1ACBEEF84B98}|ConcertTickets\\ConcertTickets.csproj|c:\\users\\elmim\\source\\repos\\concerttickets\\concerttickets\\concerttickets\\views\\concert\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E9FC4808-02C2-4267-BBB8-1ACBEEF84B98}|ConcertTickets\\ConcertTickets.csproj|solutionrelative:concerttickets\\views\\concert\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9FC4808-02C2-4267-BBB8-1ACBEEF84B98}|ConcertTickets\\ConcertTickets.csproj|c:\\users\\elmim\\source\\repos\\concerttickets\\concerttickets\\concerttickets\\controllers\\concertcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9FC4808-02C2-4267-BBB8-1ACBEEF84B98}|ConcertTickets\\ConcertTickets.csproj|solutionrelative:concerttickets\\controllers\\concertcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9FC4808-02C2-4267-BBB8-1ACBEEF84B98}|ConcertTickets\\ConcertTickets.csproj|c:\\users\\elmim\\source\\repos\\concerttickets\\concerttickets\\concerttickets\\views\\concert\\buy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E9FC4808-02C2-4267-BBB8-1ACBEEF84B98}|ConcertTickets\\ConcertTickets.csproj|solutionrelative:concerttickets\\views\\concert\\buy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,8 +38,35 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ConcertService.cs",
+              "DocumentMoniker": "C:\\Users\\elmim\\source\\repos\\ConcertTickets\\ConcertTickets\\ConcertTickets\\Services\\ConcertService.cs",
+              "RelativeDocumentMoniker": "ConcertTickets\\Services\\ConcertService.cs",
+              "ToolTip": "C:\\Users\\elmim\\source\\repos\\ConcertTickets\\ConcertTickets\\ConcertTickets\\Services\\ConcertService.cs",
+              "RelativeToolTip": "ConcertTickets\\Services\\ConcertService.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAmwCAAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T22:13:01.016Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Concert.cs",
+              "DocumentMoniker": "C:\\Users\\elmim\\source\\repos\\ConcertTickets\\ConcertTickets\\ConcertTickets\\Data\\Entities\\Concert.cs",
+              "RelativeDocumentMoniker": "ConcertTickets\\Data\\Entities\\Concert.cs",
+              "ToolTip": "C:\\Users\\elmim\\source\\repos\\ConcertTickets\\ConcertTickets\\ConcertTickets\\Data\\Entities\\Concert.cs",
+              "RelativeToolTip": "ConcertTickets\\Data\\Entities\\Concert.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T21:54:11.784Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
@@ -46,52 +85,65 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
+              "Title": "Buy.cshtml",
+              "DocumentMoniker": "C:\\Users\\elmim\\source\\repos\\ConcertTickets\\ConcertTickets\\ConcertTickets\\Views\\Concert\\Buy.cshtml",
+              "RelativeDocumentMoniker": "ConcertTickets\\Views\\Concert\\Buy.cshtml",
+              "ToolTip": "C:\\Users\\elmim\\source\\repos\\ConcertTickets\\ConcertTickets\\ConcertTickets\\Views\\Concert\\Buy.cshtml",
+              "RelativeToolTip": "ConcertTickets\\Views\\Concert\\Buy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-12T19:28:51.574Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ConcertViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\elmim\\source\\repos\\ConcertTickets\\ConcertTickets\\ConcertTickets\\Models\\ConcertViewModel.cs",
+              "RelativeDocumentMoniker": "ConcertTickets\\Models\\ConcertViewModel.cs",
+              "ToolTip": "C:\\Users\\elmim\\source\\repos\\ConcertTickets\\ConcertTickets\\ConcertTickets\\Models\\ConcertViewModel.cs",
+              "RelativeToolTip": "ConcertTickets\\Models\\ConcertViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T15:21:44.911Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\elmim\\source\\repos\\ConcertTickets\\ConcertTickets\\ConcertTickets\\Views\\Concert\\Index.cshtml",
               "RelativeDocumentMoniker": "ConcertTickets\\Views\\Concert\\Index.cshtml",
               "ToolTip": "C:\\Users\\elmim\\source\\repos\\ConcertTickets\\ConcertTickets\\ConcertTickets\\Views\\Concert\\Index.cshtml",
               "RelativeToolTip": "ConcertTickets\\Views\\Concert\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-11T22:38:56.282Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "ConcertRepository.cs",
               "DocumentMoniker": "C:\\Users\\elmim\\source\\repos\\ConcertTickets\\ConcertTickets\\ConcertTickets\\Repositories\\ConcertRepository.cs",
               "RelativeDocumentMoniker": "ConcertTickets\\Repositories\\ConcertRepository.cs",
               "ToolTip": "C:\\Users\\elmim\\source\\repos\\ConcertTickets\\ConcertTickets\\ConcertTickets\\Repositories\\ConcertRepository.cs",
               "RelativeToolTip": "ConcertTickets\\Repositories\\ConcertRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-11T20:42:23.91Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ConcertService.cs",
-              "DocumentMoniker": "C:\\Users\\elmim\\source\\repos\\ConcertTickets\\ConcertTickets\\ConcertTickets\\Services\\ConcertService.cs",
-              "RelativeDocumentMoniker": "ConcertTickets\\Services\\ConcertService.cs",
-              "ToolTip": "C:\\Users\\elmim\\source\\repos\\ConcertTickets\\ConcertTickets\\ConcertTickets\\Services\\ConcertService.cs",
-              "RelativeToolTip": "ConcertTickets\\Services\\ConcertService.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAwwBEAAABjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-11T22:13:01.016Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "ConcertController.cs",
               "DocumentMoniker": "C:\\Users\\elmim\\source\\repos\\ConcertTickets\\ConcertTickets\\ConcertTickets\\Controllers\\ConcertController.cs",
               "RelativeDocumentMoniker": "ConcertTickets\\Controllers\\ConcertController.cs",
               "ToolTip": "C:\\Users\\elmim\\source\\repos\\ConcertTickets\\ConcertTickets\\ConcertTickets\\Controllers\\ConcertController.cs",
               "RelativeToolTip": "ConcertTickets\\Controllers\\ConcertController.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAA3wBEAAABcAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAApwBgAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-10T22:10:15.859Z",
               "EditorCaption": ""

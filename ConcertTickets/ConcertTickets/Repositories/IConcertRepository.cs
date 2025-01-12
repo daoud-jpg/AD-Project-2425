@@ -5,5 +5,6 @@ namespace ConcertTickets.Repositories
     public interface IConcertRepository
     {
         IEnumerable<Concert> GetConcertsWithTicketOffers();
+        Concert GetConcertWithTicketOffers(int id);
     }
 }

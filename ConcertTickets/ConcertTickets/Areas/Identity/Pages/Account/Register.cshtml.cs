@@ -21,6 +21,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
 using ConcertTickets.Data;
+using Newtonsoft.Json;
 
 namespace ConcertTickets.Areas.Identity.Pages.Account
 {
@@ -81,6 +82,7 @@ namespace ConcertTickets.Areas.Identity.Pages.Account
             [Display(Name = "Familienaam")]
             public string LastName { get; set; }
 
+            [Required]
             [MemberCardNumberValidation]
             [ValidateNever]
             [Display(Name = "Lidkaartnummer")]

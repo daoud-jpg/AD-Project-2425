@@ -5,6 +5,6 @@ namespace ConcertTickets.Services
     public interface IConcertService
     {
         IEnumerable<ConcertViewModel> GetAllConcerts();
-        //ConcertViewModel GetConcertById(int id);
+        ConcertViewModel GetConcertById(int id);
     }
 }

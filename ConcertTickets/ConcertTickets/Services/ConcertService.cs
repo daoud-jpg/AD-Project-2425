@@ -21,25 +21,26 @@ namespace ConcertTickets.Services
                 Artist = c.Artist,
                 Location = c.Location,
                 Date = c.Date,
-                ArtistPicture = c.Artist
+                ArtistPicture = c.Artist,
+                NumberOfTickets = c.TicketOffer.NumTickets
             });
 
             return concertModels;
         }
 
-        //public ConcertViewModel GetConcertById(int id)
-        //{
-        //    Concert concert = concertRepo.GetById(id);
-        //    ConcertViewModel model = new ConcertViewModel()
-        //    {
-        //        Id = id,
-        //        Artist = concert.Artist,
-        //        Location = concert.Location,
-        //        Date = concert.Date,
-        //        ArtistPicture = $"/img/{concert.Artist}"
-        //    };
+        public ConcertViewModel GetConcertById(int id)
+        {
+            Concert concert = concertRepo.GetConcertWithTicketOffers(id);
+            ConcertViewModel model = new ConcertViewModel()
+            {
+                Id = concert.Id,
+                Artist = concert.Artist,
+                Location = concert.Location,
+                Date = concert.Date,
+                ArtistPicture = concert.Artist
+            };
 
-        //    return model;
-        //}
+            return model;
+        }
     }
 }

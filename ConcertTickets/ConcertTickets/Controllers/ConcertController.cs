@@ -19,6 +19,12 @@ namespace ConcertTickets.Controllers
             return View(concertOverzicht);
         }
 
+        public IActionResult Buy(int id)
+        {
+            ConcertViewModel model = concertService.GetConcertById(id);
+            return View(model);
+        }
+
 
     }
 }
