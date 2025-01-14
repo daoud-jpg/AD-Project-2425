@@ -12,7 +12,6 @@ namespace ConcertTickets.Services
         {
             concertRepo = _concertRepo;
         }
-
         public IEnumerable<ConcertViewModel> GetAllConcerts()
         {
             IEnumerable<ConcertViewModel> concertModels = concertRepo.GetConcertsWithTicketOffers().Select(c => new ConcertViewModel
@@ -22,7 +21,7 @@ namespace ConcertTickets.Services
                 Location = c.Location,
                 Date = c.Date,
                 ArtistPicture = c.Artist,
-                NumberOfTickets = c.TicketOffer.NumTickets
+                NumberOfTickets = c.TicketOffers.Select(t => t.NumTickets).Sum()
             });
 
             return concertModels;
@@ -37,7 +36,8 @@ namespace ConcertTickets.Services
                 Artist = concert.Artist,
                 Location = concert.Location,
                 Date = concert.Date,
-                ArtistPicture = concert.Artist
+                ArtistPicture = concert.Artist,
+                TicketOffers = concert.TicketOffers
             };
 
             return model;

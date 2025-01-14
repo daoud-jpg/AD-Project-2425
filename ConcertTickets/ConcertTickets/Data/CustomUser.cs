@@ -1,16 +1,32 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using ConcertTickets.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.IdentityModel.Tokens;
 using System.Diagnostics.CodeAnalysis;
 namespace ConcertTickets.Data
 {
     public class CustomUser : IdentityUser
     {
-        [PersonalData]
         public string FirstName { get; set; }
 
-        [PersonalData]
         public string LastName { get; set; }
 
-        [PersonalData]
         public string? MemberCardNumber { get; set; }
+
+        private readonly bool hasMemberCard;
+        public bool? HasMemberCard
+        {
+            get { return hasMemberCard; }
+            set
+            {
+                if (MemberCardNumber != "")
+                {
+                    value = true;
+                }
+                else
+                {
+                    value = false;
+                }
+            }
+        }
     }
 }

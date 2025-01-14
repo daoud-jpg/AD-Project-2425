@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
-
+using ConcertTickets.Data.Entities;
 namespace ConcertTickets.Models
 {
     public class ConcertViewModel
@@ -10,6 +10,7 @@ namespace ConcertTickets.Models
         public string Location { get; set; }
         public DateTime Date { get; set; }
         public int NumberOfTickets { get; set; }
+        public ICollection<TicketOffer> TicketOffers { get; set; }
         
     }
 }

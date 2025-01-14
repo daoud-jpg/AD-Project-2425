@@ -37,7 +37,12 @@ namespace ConcertTickets
             // Services
             builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             builder.Services.AddScoped<IConcertRepository, ConcertRepository>();
+            builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+            builder.Services.AddScoped<IOrderService, OrderService>();
             builder.Services.AddScoped<IConcertService, ConcertService>();
+            builder.Services.AddScoped<ITicketOfferService, TicketOfferService>();
+            builder.Services.AddScoped<ITicketOfferRepository, TicketOfferRepository>();
+
 
             var app = builder.Build();
 
@@ -74,19 +79,19 @@ namespace ConcertTickets
                 const string ADMIN_ACCOUNT = "admin@test.be";
                 const string ADMIN_PASSWORD = "Admin@123";
                 using var scope = serviceProvider.CreateScope();
-            var userManager = scope.ServiceProvider.GetRequiredService<UserManager<CustomUser>>();
+            var userManager = scope.ServiceProvider.GetRequiredService<UserManager<Data.CustomUser>>();
 
             var user = await userManager.FindByEmailAsync(ADMIN_ACCOUNT);
             if (user == null)
             {
                     // Optioneel: maak een standaardgebruiker aan als die niet bestaat
-                    user = new CustomUser
+                    user = new Data.CustomUser
                     {
                         FirstName = "Admin",
                         LastName = "User",
                         Email = ADMIN_ACCOUNT,
                         UserName = ADMIN_ACCOUNT,
-                        MemberCardNumber = "ODI0123456789",
+                        MemberCardNumber = "ODI012789",
                         EmailConfirmed = true
                     };
                 await userManager.CreateAsync(user, ADMIN_PASSWORD); // Standaard wachtwoord

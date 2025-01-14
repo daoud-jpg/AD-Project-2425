@@ -1,7 +1,7 @@
 ﻿@using ConcertTickets.Data
 @using Microsoft.AspNetCore.Identity
-@inject SignInManager<CustomUser> SignInManager
-@inject UserManager<CustomUser> UserManager
+@inject             SignInManager<ConcertTickets.Data.CustomUser> SignInManager
+@inject             UserManager<ConcertTickets.Data.CustomUser> UserManager
 
 <ul class="navbar-nav">
 @if (SignInManager.IsSignedIn(User))

@@ -11,13 +11,12 @@ namespace ConcertTickets.Repositories
 
         public IEnumerable<Concert> GetConcertsWithTicketOffers()
         {
-            //return context.Set<Concert>().Include(t => t.TicketOffer);
-            return context.Set<Concert>().Include(t => t.TicketOffer);
+            return context.Set<Concert>().Include(t => t.TicketOffers);
         }
 
         public Concert GetConcertWithTicketOffers(int id)
         {
-            return context.Set<Concert>().Where(c => c.Id == id).Include(c => c.TicketOffer).FirstOrDefault();
+            return context.Set<Concert>().Include(t => t.TicketOffers).Where(c => c.Id == id).SingleOrDefault();
         }
     }
 }

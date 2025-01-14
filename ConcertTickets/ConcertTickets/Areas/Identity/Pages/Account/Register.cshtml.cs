@@ -27,17 +27,17 @@ namespace ConcertTickets.Areas.Identity.Pages.Account
 {
     public class RegisterModel : PageModel
     {
-        private readonly SignInManager<CustomUser> _signInManager;
-        private readonly UserManager<CustomUser> _userManager;
-        private readonly IUserStore<CustomUser> _userStore;
-        private readonly IUserEmailStore<CustomUser> _emailStore;
+        private readonly SignInManager<Data.CustomUser> _signInManager;
+        private readonly UserManager<Data.CustomUser> _userManager;
+        private readonly IUserStore<Data.CustomUser> _userStore;
+        private readonly IUserEmailStore<Data.CustomUser> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
 
         public RegisterModel(
-            UserManager<CustomUser> userManager,
-            IUserStore<CustomUser> userStore,
-            SignInManager<CustomUser> signInManager,
+            UserManager<Data.CustomUser> userManager,
+            IUserStore<Data.CustomUser> userStore,
+            SignInManager<Data.CustomUser> signInManager,
             ILogger<RegisterModel> logger,
             IEmailSender emailSender)
         {
@@ -82,11 +82,9 @@ namespace ConcertTickets.Areas.Identity.Pages.Account
             [Display(Name = "Familienaam")]
             public string LastName { get; set; }
 
-            [Required]
-            [MemberCardNumberValidation]
-            [ValidateNever]
             [Display(Name = "Lidkaartnummer")]
-            public string MemberCardNumber { get; set; }
+            [MemberCardNumberValidation("ODI0123456789")]
+            public string? MemberCardNumber { get; set; }
 
             [Required]
             [EmailAddress]
@@ -123,6 +121,9 @@ namespace ConcertTickets.Areas.Identity.Pages.Account
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
+                user.FirstName = Input.FirstName;
+                user.LastName = Input.LastName;
+                
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
                 if (result.Succeeded)
@@ -161,11 +162,11 @@ namespace ConcertTickets.Areas.Identity.Pages.Account
             return Page();
         }
 
-        private CustomUser CreateUser()
+        private Data.CustomUser CreateUser()
         {
             try
             {
-                return Activator.CreateInstance<CustomUser>();
+                return Activator.CreateInstance<Data.CustomUser>();
             }
             catch
             {
@@ -175,13 +176,13 @@ namespace ConcertTickets.Areas.Identity.Pages.Account
             }
         }
 
-        private IUserEmailStore<CustomUser> GetEmailStore()
+        private IUserEmailStore<Data.CustomUser> GetEmailStore()
         {
             if (!_userManager.SupportsUserEmail)
             {
                 throw new NotSupportedException("The default UI requires a user store with email support.");
             }
-            return (IUserEmailStore<CustomUser>)_userStore;
+            return (IUserEmailStore<Data.CustomUser>)_userStore;
         }
     }
 }

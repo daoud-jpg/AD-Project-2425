@@ -10,6 +10,7 @@ namespace ConcertTickets.Data.Entities
         public double Price { get; set; }
 
         //Relations
+        [ForeignKey("Concert")]
         public int ConcertId { get; set; }
         public Concert Concert { get; set; }
     }

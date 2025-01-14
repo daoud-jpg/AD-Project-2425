@@ -1,23 +1,10 @@
 ﻿@model IEnumerable<ConcertViewModel>
-@{
-    List<int> distinctConcerts = new List<int>();
 
-    List<int> ticketSums = new List<int>();
-    Dictionary<int, int> numOfTicketsPerConcert = new Dictionary<int, int>();
-    foreach (var item in Model)
-    {
-        if (numOfTicketsPerConcert.ContainsKey(item.Id)) numOfTicketsPerConcert[item.Id] += item.NumberOfTickets;
-        else numOfTicketsPerConcert.Add(item.Id, item.NumberOfTickets);
-    }
-
-}
 
 <h2>Concert Overzicht</h2>
 <div class="row row-cols-1 row-cols-md-4 g-4">
     @foreach (var item in Model)
     {
-        if (!distinctConcerts.Contains(item.Id))
-        {
             <div class="col">
                 <div class="card text-center h-100" style="width: 18rem;">
                     <img src="/img/@{@item.ArtistPicture.Replace(" ", string.Empty)}.png" class="card-img-top border-bottom-1 opacity-0" alt="...">
@@ -25,11 +12,11 @@
                         <h5 class="text-uppercase">@item.Date.DayOfWeek</h5>
                         <div class="day">@item.Date.Day</div>
                         <div class="month">MRT. 2025</div>
-                        @if (numOfTicketsPerConcert[item.Id] > 500)
+                        @if (item.NumberOfTickets > 500)
                         {
                             <a asp-controller="Concert" asp-action="Buy" asp-route-id="@item.Id" class="btn btn-outline-primary">Koop tickets</a>
                         }
-                        else if (numOfTicketsPerConcert[item.Id] > 0)
+                        else if (item.NumberOfTickets > 0)
                         {
                             <a asp-controller="Concert" asp-action="Buy" asp-route-id="@item.Id" class="btn btn-outline-warning">Laatste tickets</a>
                         }
@@ -40,7 +27,6 @@
                     </div>
                 </div>
             </div>
-            distinctConcerts.Add(item.Id);
         }
     }
 </div>
