@@ -21,6 +21,7 @@ namespace ConcertTickets.Services
                 Location = c.Location,
                 Date = c.Date,
                 ArtistPicture = c.Artist,
+                MonthOfYear = GetNameOfMonth(c.Date.Month),
                 NumberOfTickets = c.TicketOffers.Select(t => t.NumTickets).Sum()
             });
 
@@ -37,10 +38,58 @@ namespace ConcertTickets.Services
                 Location = concert.Location,
                 Date = concert.Date,
                 ArtistPicture = concert.Artist,
-                TicketOffers = concert.TicketOffers
+                TicketOffers = concert.TicketOffers,
+                MonthOfYear = GetNameOfMonth(concert.Date.Month)
             };
 
             return model;
+        }
+
+        public string GetNameOfMonth(int givenMonth)
+        {
+            string month = "";
+            switch (givenMonth)
+            {
+                case 1:
+                    month = "JNY";
+                    break;
+                case 2:
+                    month = "FEB";
+                    break;
+                case 3:
+                    month = "MRT";
+                    break;
+                case 4:
+                    month = "APL";
+                    break;
+                case 5:
+                    month = "MAY";
+                    break;
+                case 6:
+                    month = "JUN";
+                    break;
+                case 7:
+                    month = "JUL";
+                    break;
+                case 8:
+                    month = "AUG";
+                    break;
+                case 9:
+                    month = "SEP";
+                    break;
+                case 10:
+                    month = "OCT";
+                    break;
+                case 11:
+                    month = "NOV";
+                    break;
+                case 12:
+                    month = "DEC";
+                    break;
+                default:
+                    break;
+            }
+            return month;
         }
     }
 }

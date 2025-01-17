@@ -1,30 +1,62 @@
 ﻿@model OrderFormViewModel
 
-<p>Type @Model.TicketType</p>
-<p>Prijs @Model.TicketPrice</p>
-@if (Model.HasMemberCard == true)
-    {
-        <p>yes</p>
-    }
-<p>Aantal @Model.NumTickets</p>
 
-<form method="post" class="row g-3 w-75" asp-controller="Order" asp-action="Create">
-    <div class="col-4">
-        <label asp-for="@Model.NumberOfSelectedTickets" class="form-label">Number</label>
-        <input asp-for="@Model.NumberOfSelectedTickets" class="form-control" value="" />
-        <span asp-validation-for="@Model.NumberOfSelectedTickets" class="text-danger"></span>
+
+
+
+
+
+<div class="d-flex justify-content-between">
+    <div class="w-50" style="height:500px;">
+        <div class="card p-2 w-100">
+            <p>
+                <span class="fw-bold">Type:</span><br />
+                @Model.TicketType
+            </p>
+            <p>
+                <span class="fw-bold">Prijs:</span><br />
+                @Model.TicketPrice
+            </p>
+            <p>
+                <span class="fw-bold">Aatal beschikbare tickets:</span><br />
+                @Model.NumTickets
+            </p>
+        </div>
+        <form method="post" class="w-100" asp-controller="Order" asp-action="Create">
+            <div class="col-4 w-100">
+                <label asp-for="@Model.NumberOfSelectedTickets" class="form-label">Geef het aantal gewenste tickets in (min 1, max 5)</label>
+                <input asp-for="@Model.NumberOfSelectedTickets" class="form-control" value="1" min="1" max="5" />
+                <span asp-validation-for="@Model.NumberOfSelectedTickets" class="text-danger"></span>
+            </div>
+            <div class="w-100">
+                <input type="checkbox" asp-for="@Model.TermsAndConditions">
+                <label class="mb-3">Ik ga akkoord met de algemene voorwaarden</label>
+                <span asp-validation-for="@Model.TermsAndConditions" class="text-danger"></span>
+            </div>
+            <button type="submit" value="Create" class="btn btn-primary w-25">Bestellen</button>
+
+
+            <span><input asp-for="@Model.TicketOfferId" value="@Model.TicketOfferId" hidden /></span>
+
+        </form>
     </div>
-    <p></p>
-    <div class="mb-3">
-        <div>
-            <input type="checkbox" asp-for="@Model.TermsAndConditions">
-            <label class="mb-3">
-                Ik ga akkoord met de algemene voorwaarden
-            </label>
-            <br />
-            <span asp-validation-for="@Model.TermsAndConditions" class="text-danger"></span>
+    <div class="card p-2 w-50">
+        <div class="text-center h-100" style="width: 18rem;">
+            <img src="/img/@{
+                        @Model.ConcertCard.ArtistPicture.Replace(" ", string.Empty)
+}.png" class="card-img-top border-bottom-1 opacity-0">
+            <div class="p-2 d-block align-items-start">
+                <div class="date-box bg-danger m-1" style="width: 81px;">
+                    <div class="text-uppercase text-white fs-6">@Model.ConcertCard.Date.DayOfWeek.ToString().Substring(0, 2)</div>
+                    <div class="day text-white fs-6 fw-bold d-block align-items-start">@Model.ConcertCard.Date.Day</div>
+                    <div class="month text-white">@Model.ConcertCard.MonthOfYear. @Model.ConcertCard.Date.Year</div>
+                </div>
+                <div class="d-block align-items-start">
+                    <p class="m-0 fw-bold d-flex align-items-start">@Model.ConcertCard.Artist</p>
+                    <p><small class="d-flex align-content-start">@Model.ConcertCard.Location</small></p>
+                </div>
+            </div>
         </div>
     </div>
-    <span><input asp-for="@Model.TicketOfferId" value="@Model.TicketOfferId" hidden/></span>
-    <button type="submit" value="Create" class="btn btn-primary">Bestellen</button>
-</form>
+</div>
+

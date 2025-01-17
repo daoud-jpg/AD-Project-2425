@@ -7,7 +7,7 @@ namespace ConcertTickets.Data.Entities
     {
         public int UserId { get; set; }
         public string UserName { get; set; }
-        public int NnumTickets { get; set; }
+        public int NumTickets { get; set; }
         public double TotalPrice { get; set; }
         public bool Paid { get; set; }
         public bool DiscountApplied { get; set; }

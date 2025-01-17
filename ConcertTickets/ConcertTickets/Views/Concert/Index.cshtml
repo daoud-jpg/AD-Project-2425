@@ -1,6 +1,5 @@
 ﻿@model IEnumerable<ConcertViewModel>
 
-
 <h2>Concert Overzicht</h2>
 <div class="row row-cols-1 row-cols-md-4 g-4">
     @foreach (var item in Model)
@@ -8,25 +7,33 @@
             <div class="col">
                 <div class="card text-center h-100" style="width: 18rem;">
                     <img src="/img/@{@item.ArtistPicture.Replace(" ", string.Empty)}.png" class="card-img-top border-bottom-1 opacity-0" alt="...">
-                    <div class="date-box">
-                        <h5 class="text-uppercase">@item.Date.DayOfWeek</h5>
-                        <div class="day">@item.Date.Day</div>
-                        <div class="month">MRT. 2025</div>
-                        @if (item.NumberOfTickets > 500)
-                        {
-                            <a asp-controller="Concert" asp-action="Buy" asp-route-id="@item.Id" class="btn btn-outline-primary">Koop tickets</a>
-                        }
-                        else if (item.NumberOfTickets > 0)
-                        {
-                            <a asp-controller="Concert" asp-action="Buy" asp-route-id="@item.Id" class="btn btn-outline-warning">Laatste tickets</a>
-                        }
-                        else
-                        {
-                            <a asp-controller="Concert" asp-action="Buy" asp-route-id="@item.Id" class="btn btn-outline-danger">Uitverkocht</a>
-                        }
+                    <div class="p-2 d-block align-items-start">
+                        <div class="date-box bg-danger m-1" style="width: 81px;">
+                            <div class="text-uppercase text-white fs-6">@item.Date.DayOfWeek.ToString().Substring(0, 2)</div>
+                            <div class="day text-white fs-6 fw-bold d-block align-items-start">@item.Date.Day</div>
+                            <div class="month text-white">@item.MonthOfYear. @item.Date.Year</div>
+                        </div>
+                        <div class="d-block align-items-start">
+                            <p class="m-0 fw-bold d-flex align-items-start">@item.Artist</p>
+                            <p><small class="d-flex align-content-start">@item.Location</small></p>
+                        </div>
+                        <div class="m-1">
+                            @if (item.NumberOfTickets > 500)
+                            {
+                                <a asp-controller="Concert" asp-action="Buy" asp-route-id="@item.Id" class="btn btn-outline-primary">Koop tickets</a>
+                            }
+                            else if (item.NumberOfTickets > 0)
+                            {
+                                <a asp-controller="Concert" asp-action="Buy" asp-route-id="@item.Id" class="btn btn-outline-warning">Laatste tickets</a>
+                            }
+                            else
+                            {
+                                <a asp-controller="Concert" asp-action="Buy" asp-route-id="@item.Id" class="btn btn-outline-danger">Uitverkocht</a>
+                            }
+                        </div>
                     </div>
                 </div>
             </div>
-        }
+        
     }
 </div>

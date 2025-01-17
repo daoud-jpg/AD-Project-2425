@@ -6,5 +6,6 @@ namespace ConcertTickets.Services
     {
         IEnumerable<ConcertViewModel> GetAllConcerts();
         ConcertViewModel GetConcertById(int id);
+        string GetNameOfMonth(int givenMonth);
     }
 }

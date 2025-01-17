@@ -22,7 +22,8 @@ namespace ConcertTickets.Services
                 TicketType = ticketOffer.TicketType,
                 TicketPrice = ticketOffer.Price,
                 NumTickets = ticketOffer.NumTickets,
-                TicketOfferId = ticketOffer.Id
+                TicketOfferId = ticketOffer.Id,
+                ConcertId = ticketOffer.ConcertId
             };
             return model;
         }

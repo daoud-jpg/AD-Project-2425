@@ -12,13 +12,15 @@ namespace ConcertTickets.Controllers
     {
         private ITicketOfferService ticketOfferService;
         private IOrderService orderService;
-        private UserManager<Data.CustomUser> userManager;
+        private UserManager<CustomUser> userManager;
+        private IConcertService concertService;
 
-        public OrderController(ITicketOfferService _ticketOfferService, IOrderService _orderService, UserManager<Data.CustomUser> _userManager)
+        public OrderController(ITicketOfferService _ticketOfferService, IOrderService _orderService, UserManager<CustomUser> _userManager, IConcertService _concertService)
         {
             ticketOfferService = _ticketOfferService;
             orderService = _orderService;
             userManager = _userManager;
+            concertService = _concertService;
         }
         public IActionResult Index()
         {
@@ -32,6 +34,7 @@ namespace ConcertTickets.Controllers
             OrderFormViewModel model = ticketOfferService.GetTicketOfferForOrder(id);
             model.UserId = userManager.GetUserAsync(User).Id;
             model.UserName = user.UserName;
+            model.ConcertCard = concertService.GetConcertById(model.ConcertId);
 
             return View(model);
         }

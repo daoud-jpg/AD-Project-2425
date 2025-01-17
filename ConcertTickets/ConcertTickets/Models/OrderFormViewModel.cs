@@ -23,6 +23,10 @@ namespace ConcertTickets.Models
         [ValidateNever]
         public int NumTickets { get; set; }
         [ValidateNever]
+        public int ConcertId { get; set; }
+        [ValidateNever]
+        public ConcertViewModel ConcertCard {  get; set; }
+        [ValidateNever]
         public int UserId { get; set; }
         [ValidateNever]
         public string UserName { get; set; }
