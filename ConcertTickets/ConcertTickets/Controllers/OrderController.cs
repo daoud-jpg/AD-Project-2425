@@ -30,12 +30,9 @@ namespace ConcertTickets.Controllers
         [Authorize]
         public async Task<IActionResult> Create(int id)
         {
-            var user = await userManager.GetUserAsync(User);
             OrderFormViewModel model = ticketOfferService.GetTicketOfferForOrder(id);
-            model.UserId = userManager.GetUserAsync(User).Id;
-            model.UserName = user.UserName;
+            
             model.ConcertCard = concertService.GetConcertById(model.ConcertId);
-
             return View(model);
         }
 
@@ -46,16 +43,29 @@ namespace ConcertTickets.Controllers
         {
             if (ModelState.IsValid)
             {
-                int id = orderService.CreateOrder(model);
+                var user = await userManager.GetUserAsync(User);
+                model.UserId = userManager.GetUserAsync(User).Id;
+                model.UserName = user.UserName;
+
                 TicketOfferUpdateViewModel ticketOffer = new TicketOfferUpdateViewModel()
                 {
                     TicketOfferId = ticketOfferService.GetTicketOfferForOrder(model.TicketOfferId).TicketOfferId,
                     NumOfOrderedTickets = model.NumberOfSelectedTickets
                 };
+
                 ticketOfferService.UpdateTicketOffer(ticketOffer);
-                return RedirectToAction("Index", "Concert");
+                int id = orderService.CreateOrder(model);
+
+                return RedirectToAction("Success", "Order", new { id = id });
             }
             return View(model);
         }   
+
+        public IActionResult Success(int id)
+        {
+            OrderViewModel model = new OrderViewModel();
+            model = orderService.GetOrderById(id);
+            return View(model);
+        }
     }   
 }

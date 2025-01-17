@@ -1,5 +1,6 @@
 ﻿using ConcertTickets.Data;
 using ConcertTickets.Data.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace ConcertTickets.Repositories
 {
@@ -7,14 +8,14 @@ namespace ConcertTickets.Repositories
     {
         public OrderRepository(ApplicationDbContext _context) : base(_context) { }
 
-        //public Order GetOrderById(int id)
-        //{
-        //    return null;
-        //}
+        public Order GetOrderById(int id)
+        {
+            return context.Set<Order>().Include(t => t.TicketOffer).Where(c => c.Id == id).SingleOrDefault();
+        }
 
-        //public IEnumerable<Order> GetOrdersByStatus(bool paid)
-        //{
-        //    return null;
-        //}
+        public IEnumerable<Order> GetOrdersByStatus(bool paid)
+        {
+            return null;
+        }
     }
 }

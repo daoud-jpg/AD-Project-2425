@@ -13,7 +13,7 @@ public class Repository<T> : IRepository<T> where T : BaseEntity
 
     public void Add(T entity)
     {
-        context.Set<T>().Add(entity);
+       context.Set<T>().Add(entity);
     }
 
     public void Delete(T entity)

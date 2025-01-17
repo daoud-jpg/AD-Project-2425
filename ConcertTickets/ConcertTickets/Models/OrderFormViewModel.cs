@@ -7,12 +7,14 @@ namespace ConcertTickets.Models
 {
     public class OrderFormViewModel
     {
+        [ValidateNever]
+        public int Id { get; set; }
         [Required]
         public int NumberOfSelectedTickets {  get; set; }
         [Required]
         public bool TermsAndConditions {  get; set; }
 
-        [ValidateNever]
+        
         public int TicketOfferId { get; set; }
         [ValidateNever]
         public string TicketType { get; set; }

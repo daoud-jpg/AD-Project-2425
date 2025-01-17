@@ -10,9 +10,13 @@ namespace ConcertTickets.Data.Entities
         public int NumTickets { get; set; }
         public double TotalPrice { get; set; }
         public bool Paid { get; set; }
+        [NotMapped]
         public bool DiscountApplied { get; set; }
-        
+        [NotMapped]
+        public int NumberOfSelectedTickets { get; set; }
+
         //Relations
+        [ForeignKey("TicketOffer")]
         public int TicketOfferId { get; set; }
         public TicketOffer TicketOffer { get; set; }
     }

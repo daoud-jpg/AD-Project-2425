@@ -1,14 +1,8 @@
 ﻿@model OrderFormViewModel
 
-
-
-
-
-
-
 <div class="d-flex justify-content-between">
-    <div class="w-50" style="height:500px;">
-        <div class="card p-2 w-100">
+    <div class="w-50 d-flex align-items-start flex-column mb-3" style="height:500px; margin-right:15px;">
+        <div class="card mb-auto p-2 w-100">
             <p>
                 <span class="fw-bold">Type:</span><br />
                 @Model.TicketType
@@ -33,18 +27,19 @@
                 <label class="mb-3">Ik ga akkoord met de algemene voorwaarden</label>
                 <span asp-validation-for="@Model.TermsAndConditions" class="text-danger"></span>
             </div>
-            <button type="submit" value="Create" class="btn btn-primary w-25">Bestellen</button>
-
+            <button type="submit" value="Create" class="btn btn-primary" style="width: fit-content;">Bestellen</button>
 
             <span><input asp-for="@Model.TicketOfferId" value="@Model.TicketOfferId" hidden /></span>
-
+            <span><input asp-for="@Model.Id" value="@Model.Id" hidden /></span>
+            <span><input asp-for="@Model.NumTickets" value="@Model.NumTickets" hidden /></span>
+            <span><input asp-for="@Model.TicketPrice" value="@Model.TicketPrice" hidden /></span>
         </form>
     </div>
     <div class="card p-2 w-50">
         <div class="text-center h-100" style="width: 18rem;">
             <img src="/img/@{
                         @Model.ConcertCard.ArtistPicture.Replace(" ", string.Empty)
-}.png" class="card-img-top border-bottom-1 opacity-0">
+}.png" class="card-img-top border-bottom-1 opacity-25" style="width:280px;">
             <div class="p-2 d-block align-items-start">
                 <div class="date-box bg-danger m-1" style="width: 81px;">
                     <div class="text-uppercase text-white fs-6">@Model.ConcertCard.Date.DayOfWeek.ToString().Substring(0, 2)</div>

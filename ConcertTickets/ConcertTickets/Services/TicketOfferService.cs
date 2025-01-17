@@ -23,7 +23,8 @@ namespace ConcertTickets.Services
                 TicketPrice = ticketOffer.Price,
                 NumTickets = ticketOffer.NumTickets,
                 TicketOfferId = ticketOffer.Id,
-                ConcertId = ticketOffer.ConcertId
+                ConcertId = ticketOffer.ConcertId,
+                Id = id
             };
             return model;
         }
@@ -32,9 +33,9 @@ namespace ConcertTickets.Services
         {
             TicketOffer getTicketOffer = new TicketOffer();
             getTicketOffer = ticketOfferRepository.GetTicketOfferById(model.TicketOfferId);
-            int rr = getTicketOffer.NumTickets;
-            rr = getTicketOffer.NumTickets - model.NumOfOrderedTickets;
-            getTicketOffer.NumTickets = rr;
+
+            int totalNumTickets = getTicketOffer.NumTickets - model.NumOfOrderedTickets;
+            getTicketOffer.NumTickets = totalNumTickets;
             repoTicketOffer.Update(getTicketOffer);
             repoTicketOffer.SaveChanges();
         }
